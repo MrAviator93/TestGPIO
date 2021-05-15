@@ -1,5 +1,5 @@
 # TEST GPIO
-A simple project that uses a new library 
+A simple project that uses a new gpio library for input and output pin interaction. 
 
 
 # Requirements

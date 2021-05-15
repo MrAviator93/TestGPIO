@@ -1,6 +1,8 @@
 # TEST GPIO
 A simple project that uses a new gpio library for input and output pin interaction. 
 
+main.cpp contains functions that will list all of the available gpio chips and lines for IO interaction purposes.
+io_test.cpp implements methods that allow the input and output interaction.
 
 # Requirements
 Raspberrypi microcontroller on which the project is compiled and run.

@@ -3,7 +3,6 @@ A simple project that uses a new library
 
 
 # Requirements
-A C++ compiler that supports C++ 17 revision, Boost C++ libraries and fmt formatting library.
 Raspberrypi microcontroller on which the project is compiled and run.
 
 Use the following command to install boost libraries:

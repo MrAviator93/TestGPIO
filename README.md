@@ -5,10 +5,17 @@ main.cpp contains functions that will list all of the available gpio chips and l
 io_test.cpp implements methods that allow the input and output interaction.
 
 # Requirements
-Raspberrypi microcontroller on which the project is compiled and run.
+* Raspberrypi microcontroller on which the project is compiled and run.
+* A C++ compiler that supports C++ 17 revision.
 
-Use the following command to install boost libraries:
+# GPIOD
+Use the following command to GPIOD library:
+
+```
 sudo apt-get install libgpiod-dev
+```
+
+
 # License
 Copyright 2021 Arturs Kalnins
 

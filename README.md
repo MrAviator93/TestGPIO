@@ -1,4 +1,4 @@
-# TEST GPIO
+# TEST GPIO / RP4IO
 A simple project that uses a new gpio library for input and output pin interaction. 
 
 main.cpp contains functions that will list all of the available gpio chips and lines for IO interaction purposes.

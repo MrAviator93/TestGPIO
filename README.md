@@ -8,13 +8,12 @@ io_test.cpp implements methods that allow the input and output interaction.
 * Raspberrypi microcontroller on which the project is compiled and run.
 * A C++ compiler that supports C++ 17 revision.
 
-# GPIOD
+## GPIOD
 Use the following command to GPIOD library:
 
 ```
 sudo apt-get install libgpiod-dev
 ```
-
 
 # License
 Copyright 2021 Arturs Kalnins

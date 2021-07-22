@@ -12,10 +12,10 @@ FILE WRITEN BY ARTUR KALNINS (21.01.2021).
 #include <thread>
 #include <chrono>
 
-using namespace std;
-
 void blink_led_thread_2( gpiod_line* led );
 bool is_button_pressed( gpiod_line* button );
+
+using namespace std::chrono_literals;
 
 int main( int argc, char* argv[] )
 {
@@ -25,7 +25,7 @@ int main( int argc, char* argv[] )
 
 	if( !chip )
 	{
-		cout << "ERROR: Couldn't open the chip: gpiochip0\n";
+		std::cout << "ERROR: Couldn't open the chip: gpiochip0\n";
 		exit( -1 );
 	}
 
@@ -39,7 +39,7 @@ int main( int argc, char* argv[] )
 
 	if( rslt < 0 )
 	{
-		cout << "ERROR: Couldn't set up pin 24 as output.\n";
+		std::cout << "ERROR: Couldn't set up pin 24 as output.\n";
 	}
 
 	//rslt = gpiod_line_request_input_flags( btn, "io_test", GPIOD_CTXLESS_FLAG_BIAS_PULL_UP );
@@ -47,7 +47,7 @@ int main( int argc, char* argv[] )
 
 	if( rslt < 0 )
 	{
-		cout << "ERROR: Couldn't set up pin 23 as input.\n";
+		std::cout << "ERROR: Couldn't set up pin 23 as input.\n";
 	}
 
 	std::thread th( blink_led_thread_2, led2 );
@@ -83,7 +83,7 @@ void led_blink()
 
 	if( !chip )
 	{
-		cout << "ERROR: Couldn't open the chip: gpiochip0\n";
+		std::cout << "ERROR: Couldn't open the chip: gpiochip0\n";
 		exit( -1 );
 	}
 
@@ -93,7 +93,7 @@ void led_blink()
 
 	if( rslt < 0 )
 	{
-		cout << "ERROR: Couldn't set up pin 24 as output.\n";
+		std::cout << "ERROR: Couldn't set up pin 24 as output.\n";
 	}
 
 	int no {0};
@@ -111,7 +111,7 @@ void led_blink()
 			gpiod_line_set_value( led, 0 );
 		}
 
-		this_thread::sleep_for( chrono::milliseconds( 500 ) );
+		std::this_thread::sleep_for( 500ms );
 	}
 }
 
@@ -132,7 +132,7 @@ void blink_led_thread_2( gpiod_line* led )
 			gpiod_line_set_value( led, 0 );
 		}
 
-		this_thread::sleep_for( chrono::milliseconds( 250 ) );
+		std::this_thread::sleep_for( 250ms );
 	}
 }
 

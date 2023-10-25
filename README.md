@@ -22,7 +22,7 @@ io_test.cpp implements methods that allow the input and output interaction.
 
 Use the following command to GPIOD library:
 
-```
+```bash
 sudo apt-get install libgpiod-dev
 ```
 

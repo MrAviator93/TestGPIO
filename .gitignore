@@ -1,11 +1,14 @@
 # Editor Related files
+.vs
 .vscode
-
-# Project generated files
-.bin
+html
 
 # Prerequisites
 *.d
+
+# We don't want to add anything from Build directory
+/Build*
+/build*
 
 # Compiled Object files
 *.slo
